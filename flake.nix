@@ -23,7 +23,7 @@
     };
 
     packages."x86_64-linux".api = let
-      deserializedManifest = lib.importTOML ./Cargo.toml;
+      deserializedManifest = lib.importTOML ./api/Cargo.toml;
     in
       pkgs.rustPlatform.buildRustPackage {
         pname = deserializedManifest.package.name;

@@ -1,3 +1,14 @@
-[workspace]
-members = ["api"]
-resolver = "3"
+[package]
+name = "iconery_api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.11.0"
+anyhow = "1.0.99"
+lettre = "0.11.18"
+md5 = "0.8.0"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.143"
+sqlx = { version = "0.8.6", features = ["mysql", "runtime-tokio-rustls"] }
+thiserror = "2.0.16"

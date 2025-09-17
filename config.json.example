@@ -1,0 +1,15 @@
+{
+  "server_host": "localhost",
+  "server_port": 8080,
+  "db_client": "mysql",
+  "db_host": "localhost",
+  "db_port": 3306,
+  "db_user": "root",
+  "db_password": "123456",
+  "db_name": "loja",
+  "smtp_host": "smtp.office365.com",
+  "smtp_port": 587,
+  "smtp_user": "youremail@mail.com",
+  "smtp_password": "53c737",
+  "smtp_from": "iconery2025@gmail.com"
+}

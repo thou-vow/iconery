@@ -1,5 +1,6 @@
 pub mod customer;
 pub mod error;
+pub mod order;
 pub mod product;
 pub mod util;
 
@@ -73,6 +74,21 @@ async fn main() -> std::io::Result<()> {
             .service(product::get_products)
             .service(product::get_featured_products)
             .service(product::get_products_with_search)
+            .service(customer::create_customer)
+            .service(customer::update_customer)
+            .service(customer::delete_customer)
+            .service(customer::get_customer)
+            .service(customer::get_customers)
+            .service(customer::login_customer)
+            .service(customer::activate_customer)
+            .service(customer::send_password_reset)
+            .service(customer::password_reset)
+            .service(order::create_order)
+            .service(order::update_order)
+            .service(order::delete_order)
+            .service(order::get_order)
+            .service(order::get_orders)
+            .service(order::get_orders_by_customer)
     })
     .bind((bind_host, bind_port))?
     .run()

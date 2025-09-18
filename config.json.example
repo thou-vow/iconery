@@ -7,9 +7,9 @@
   "db_user": "root",
   "db_password": "123456",
   "db_name": "loja",
-  "smtp_host": "smtp.office365.com",
+  "smtp_host": "smtp.gmail.com",
   "smtp_port": 587,
   "smtp_user": "youremail@mail.com",
-  "smtp_password": "53c737",
+  "smtp_password": "1234567890abcdef",
   "smtp_from": "iconery2025@gmail.com"
 }

@@ -1,4 +1,7 @@
-use lettre::{Message, SmtpTransport, Transport, transport::smtp::authentication::Credentials};
+use lettre::{
+    Message, SmtpTransport, Transport, message::header::ContentType,
+    transport::smtp::authentication::Credentials,
+};
 
 use crate::{Config, Result};
 
@@ -11,9 +14,10 @@ pub fn send_html_email(config: &Config, to: &str, subject: &str, body: String) -
         .from(config.smtp_from.parse()?)
         .to(to.parse()?)
         .subject(subject)
+        .header(ContentType::TEXT_HTML)
         .body(body)?;
 
-    let mailer = SmtpTransport::relay(&config.smtp_host)?
+    let mailer = SmtpTransport::starttls_relay(&config.smtp_host)?
         .credentials(Credentials::new(
             config.smtp_user.clone(),
             config.smtp_password.clone(),

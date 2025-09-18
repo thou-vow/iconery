@@ -14,7 +14,7 @@ pub struct CustomerRequest {
     pub password: String,
     pub phone_number: Option<String>,
     pub address: Option<String>,
-    pub is_active: bool,
+    pub is_active: Option<bool>,
 }
 
 #[derive(FromRow, Serialize)]
@@ -49,7 +49,7 @@ pub async fn create_customer(
         hashed_password,
         body.phone_number,
         body.address,
-        body.is_active,
+        body.is_active.unwrap_or(false),
     )
     .execute(&data.db_pool)
     .await?;
@@ -94,7 +94,7 @@ pub async fn update_customer(
         hashed_password,
         body.phone_number,
         body.address,
-        body.is_active,
+        body.is_active.unwrap_or(false),
         path.into_inner()
     )
     .execute(&data.db_pool)

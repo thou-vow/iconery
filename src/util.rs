@@ -6,7 +6,7 @@ use lettre::{
 use crate::{Config, Result};
 
 pub fn hash(raw: &str) -> String {
-    format!("{:032x}", md5::compute(raw))
+    format!("{:x}", md5::compute(raw))
 }
 
 pub fn send_html_email(config: &Config, to: &str, subject: &str, body: String) -> Result<()> {

@@ -44,7 +44,7 @@ INSERT INTO products (name, description, price, is_featured) VALUES
 
 -- Clientes (customers)
 INSERT INTO customers (name, email, password, phone_number, address, is_active) VALUES
-('João Silva',     'joao.silva@example.com',     'senha_joao',   '11999990001', 'R. das Laranjeiras, 10, São Paulo - SP', 1),
+('Vinicius',     'viniciuslmtcontato@gmail.com',     'senha_joao',   '11999990001', 'R. das Laranjeiras, 10, São Paulo - SP', 1),
 ('Maria Santos',   'maria.santos@example.com',  'senha_maria',  '21988880002', 'Av. Rio Branco, 123, Rio de Janeiro - RJ', 1),
 ('Pedro Almeida',   'pedro.almeida@example.com', 'senha_pedro',  '31977770003', 'R. das Oliveiras, 45, Belo Horizonte - MG', 0),
 ('Ana Costa',      'ana.costa@example.com',     'senha_ana',    '11977776666', 'R. das Flores, 7, São Paulo - SP', 1),
